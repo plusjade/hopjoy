@@ -5,10 +5,60 @@
   <%= stylesheet_link_tag "bootstrap-1.2.0.min.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <style type="text/css">
+  body{
+    color:#444;
+  }
+  ul li, ol li{
+    color:#444;
+  }
+  code {background:transparent;}
+    .columns {
+      }
+      #main {
+
+      }
+      .span3 {
+      }
+      #main h2 {
+        border-bottom:2px solid #eee;
+        margin:15px 0;
+      }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="page-header">
+      <h2 style="text-align:right;">hopjoy</h2>
+    </div>
+    
+    <div class="row" style="display:none">
+      <div class="span9 columns offset3">
+        <h2>Web-based Application Development</h>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="span3 columns">
+        adfasd
+      </div>
+      <div class="span9 columns">
+        <div id="main">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="span4 columns">
+        <div class="tags">
+          <a href="/home" class="btn info">home</a>
+          <a href="/about" class="btn info">about</a>
+          <a href="" class="btn info">hello</a>
+        </div>
+      </div>
+    
+    </div>
+  </div>
 
-<%= yield %>
 
 </body>
 </html>
