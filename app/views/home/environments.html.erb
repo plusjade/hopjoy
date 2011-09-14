@@ -1,0 +1,20 @@
+<% content_for :sidebar do %>
+
+<h3>Navigation</h3>
+
+<ul>
+  <li><%= link_to "Introducing Web Applicatons", "/pages/web-applications" %></li>
+  <li><%= link_to "Introducing the Web Browser", "/environments/browser"  %></li>
+</ul>  
+
+<h3>Browser Development Environment</h3>
+<ul>
+  <li><%= link_to "Windows", "/page/blah"  %></li>
+  <li><%= link_to "OSX", "/page/blah"  %></li>
+  <li><%= link_to "LINUX", "/page/blah"  %></li>
+</ul>
+
+<% end %>
+
+
+<%= raw @environment.body_to_html %>

@@ -3,4 +3,6 @@ Hopjoy::Application.routes.draw do
   get "/about" => "home#about"
   get "/projects/:slug" => "projects#show"
   get "/pages/:slug" => "pages#show"
+  
+  get "/environments/:slug" => "home#environments"
 end

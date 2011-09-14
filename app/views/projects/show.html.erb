@@ -1,9 +1,10 @@
 <% content_for :sidebar do %>
 
+<h3>About This Project</h3>
 
 <h4>Application Environment</h4>
 <ul>
-  <li><%= @project.platform %></li>
+  <li><%= link_to @project.platform, "/environments/#{@project.platform}"  %></li>
 </ul>  
 
 <h4>Development Environment</h4>

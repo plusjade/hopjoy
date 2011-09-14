@@ -8,4 +8,8 @@ class HomeController < ApplicationController
   
   end
   
+  def environments
+    @environment = Page.find_by_slug!(params[:slug])
+  end
+  
 end
