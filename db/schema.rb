@@ -11,12 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110914024113) do
+ActiveRecord::Schema.define(:version => 20110914043545) do
 
   create_table "pages", :force => true do |t|
     t.string   "slug"
     t.string   "type"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages_tags", :force => true do |t|
+    t.integer "page_id"
+    t.integer "tag_id"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "key"
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
