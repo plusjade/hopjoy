@@ -1,9 +1,12 @@
-### TIC-TAC-TOE For The Browser
+### TIC-TAC-TOE
 
 This guide teaches you how to build an application
 that lets you and another person play a game of TIC-TAC-TOE.
 
-#### Step 1: Create the application skeleton.
+### Platform: Web Browser
+
+#### Step 1 
+### Create the application skeleton.
 
 Fire up your Text editor and Browser - we are going to code!
 
@@ -20,7 +23,8 @@ Your app environment layout (HTML) goes in the index.html file.
 Your css goes in the style.css file.
 Your javascript that powers your app goes in app.js
 
-#### Step 2: Load the app into the browser
+#### Step 2
+### Load the app into the browser
 
 Drag the index.html file into your browser window. The browser will automatically render the page as html
 since the extension is .html. You should see the path to the file inside the url bar.
@@ -28,7 +32,8 @@ as well as "hello world" as the contents.
 Your apps is now rendering in the browser!
 
 
-#### Step 2: Create the application environment Layout
+#### Step 3
+### Create the application environment Layout
 
 *(Learning HTML is beyond the scope of this lesson. (Link) here to familiarize yourself
 with the basic HTML tags. When you have successfully created some HTML pages you can return here.)
@@ -43,7 +48,8 @@ Link up your css and javascript documents respectively.
 
 Reload your index.html in the browser. You should now see see more stuff.
 
-#### Step 3: Create a basic style for your application.
+#### Step 4
+### Create a basic style for your application.
 
 *(Learning CSS is beyond the scope of this lesson.(Link) here to practice some css styling commands,
 then you can return here when you are all caught up!)
@@ -56,7 +62,8 @@ Add a border.
 
 Reload the browser page and make sure your app is updated with the styles.
 
-#### Step 4: Powering Your Application with Javascript.
+#### Step 5 
+### Powering Your Application with Javascript.
   
   
 As you learned before we need javascript to respond to listen and respond to events

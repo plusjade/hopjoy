@@ -25,12 +25,19 @@
         border-bottom:2px solid #eee;
         margin:15px 0;
       }
+      #main h4 {
+        background:#eee;
+        padding-left:5px;
+      }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="page-header">
-      <h2 style="text-align:right;">hopjoy</h2>
+      <div class="tags" style="text-align:right">
+        <a href="/" class="btn info">home</a>
+        <a href="/about" class="btn info">about</a>
+      </div>
     </div>
     
     <div class="row" style="display:none">
@@ -40,21 +47,22 @@
     </div>
     
     <div class="row">
-      <div class="span3 columns">
-        adfasd
+      <div class="span7 columns">
+        <h3>Lessons Needed for this Project</h3>
+        <ul>
+          <li>Intro to Programming</li>
+          <li>Intro to Web Applications</li>
+          <li><strong>Web Applications for the Browser</strong></li>
+          <li>Javascript For the Browser</li>
+          <li>Your Browser Development Environment</li>
+        </ul>
       </div>
       <div class="span9 columns">
         <div id="main">
           <%= yield %>
         </div>
       </div>
-      <div class="span4 columns">
-        <div class="tags">
-          <a href="/" class="btn info">home</a>
-          <a href="/about" class="btn info">about</a>
-          <a href="" class="btn info">hello</a>
-        </div>
-      </div>
+
     
     </div>
   </div>
