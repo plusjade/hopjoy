@@ -29,6 +29,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  gem "wirble"
+  gem "hirb"  
+end
 
 group :test do
   # Pretty printed test output
