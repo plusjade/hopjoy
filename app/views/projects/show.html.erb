@@ -1,1 +1,13 @@
+<% content_for :sidebar do %>
+
+<h4>Platform: <%= @page.platform %></h4>
+
+<ul>
+<% @page.tags.each do |tag| %>
+  <li><strong><%= tag.key %>:</strong> <%= tag.value %></li>
+<% end %>
+</ul>
+
+<% end %>
+
 <%= raw @page.body_to_html %>
