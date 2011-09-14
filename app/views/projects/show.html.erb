@@ -1,13 +1,29 @@
 <% content_for :sidebar do %>
 
-<h4>Platform: <%= @page.platform %></h4>
 
+<h4>Application Environment</h4>
 <ul>
-<% @page.tags.each do |tag| %>
-  <li><strong><%= tag.key %>:</strong> <%= tag.value %></li>
-<% end %>
+  <li><%= @project.platform %></li>
+</ul>  
+
+<h4>Development Environment</h4>
+<ul>
+  <li>The <%= @project.platform %> development environment</li>
 </ul>
 
+<h4>Languages</h4>
+<ul>
+  <% @project.languages.each do |lang| %>
+  <li><%= lang.name %> - for the browser</li>
+  <% end %>
+</ul>  
+
+<h4>Frameworks</h4>
+<ul>
+  <li>Jquery</li>
+</ul>
+
+<h4>Start</h4>
 <% end %>
 
-<%= raw @page.body_to_html %>
+<%= raw @project.body_to_html %>
