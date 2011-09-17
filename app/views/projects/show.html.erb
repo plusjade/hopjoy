@@ -7,19 +7,14 @@
   <li><%= link_to @project.platform, "/environments/#{@project.platform}"  %></li>
 </ul>  
 
-<h4>Development Environment</h4>
-<ul>
-  <li>The <%= @project.platform %> development environment</li>
-</ul>
-
-<h4>Languages</h4>
+<h4>Languages Used</h4>
 <ul>
   <% @project.languages.each do |lang| %>
   <li><%= lang.name %> - for the browser</li>
   <% end %>
 </ul>  
 
-<h4>Frameworks</h4>
+<h4>Frameworks Used</h4>
 <ul>
   <li>Jquery</li>
 </ul>
