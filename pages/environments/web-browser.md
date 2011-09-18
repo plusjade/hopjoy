@@ -1,4 +1,4 @@
-## =) Introducing The Web Browser
+## Introducing The Web Browser
 
 ### What is a Web Browser?
 

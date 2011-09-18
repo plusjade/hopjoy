@@ -21,7 +21,7 @@
   </div>
   <div class="span9 columns">
     <div id="main">
-      <%= raw Page.find_by_slug("web-applications").body_to_html %>
+      <%= raw @intro %>
       
       <%= raw @environment.body_to_html %>
       

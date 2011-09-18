@@ -7,5 +7,13 @@ class Page < ActiveRecord::Base
   def body_to_html
     RDiscount.new(body.to_s).to_html
   end
-  
+
+  def self.get(slug)
+    if File.exists?("pages/#{slug}.md")
+      RDiscount.new(File.new("pages/#{slug}.md").read).to_html
+    else
+      ""
+    end
+  end  
+
 end

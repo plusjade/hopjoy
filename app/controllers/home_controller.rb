@@ -9,16 +9,12 @@ class HomeController < ApplicationController
   end
   
   def environments
+    @intro = Page.get("web-applications-intro")
+
     @environment = Environment.find_by_slug!(params[:slug])
   end
   
-  def languages
-    file = File.new("pages/#{params[:slug]}.md")
-    if file
-      markdown = RDiscount.new(file.read.to_s)
-      @language = markdown.to_html
-    end
-    
-    
+  def languages    
+    @language = Language.find_by_name!(params[:slug])
   end
 end
