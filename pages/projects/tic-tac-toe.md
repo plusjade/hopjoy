@@ -1,10 +1,4 @@
-### TIC-TAC-TOE
-
-This guide teaches you how to build an application
-that lets you and another person play a game of TIC-TAC-TOE.
-
-### Platform: Web Browser
-
+## Environment Setup BLAH
 #### Step 1 
 ### Create the application skeleton.
 
@@ -106,6 +100,8 @@ or when there is no more squares left to claim.
 Working it out:
 
 We can make the game board in HTML and CSS.
+
+## Problems
 
 **Problem**
 
