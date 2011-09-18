@@ -1,5 +1,3 @@
-## Introducing The Web Browser
-
 ### What is a Web Browser?
 
 "A web browser is a software application for retrieving, presenting, and traversing information resources on the World Wide Web" - wikipedia.
