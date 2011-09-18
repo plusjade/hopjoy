@@ -29,10 +29,15 @@
         background:#eee;
         padding-left:5px;
       }
+    .main-block {
+      background:#eee;
+      padding:5px;
+    }  
   </style>
 </head>
 <body>
   <div class="container">
+    
     <div class="page-header">
       <div class="tags" style="text-align:right">
         <a href="/" class="btn info">home</a>
@@ -40,24 +45,9 @@
       </div>
     </div>
     
-    <div class="row" style="display:none">
-      <div class="span9 columns offset3">
-        <h2>Web-based Application Development</h>
-      </div>
-    </div>
+    <%= yield %>
     
-    <div class="row">
-      <div class="span7 columns">
-        <%= yield :sidebar %>
-      </div>
-      <div class="span9 columns">
-        <div id="main">
-          <%= yield %>
-        </div>
-      </div>
-
     
-    </div>
   </div>
 
 

@@ -12,4 +12,7 @@ class HomeController < ApplicationController
     @environment = Page.find_by_slug!(params[:slug])
   end
   
+  def language
+    @language = Page.find_by_slug!(params[:slug])
+  end
 end

@@ -4,4 +4,9 @@ class ProjectsController < ApplicationController
     @project = Project.find_by_slug!(params[:slug])
   end
 
+  def lesson
+    @project = Project.find_by_slug!(params[:slug])
+  end
+
+  
 end

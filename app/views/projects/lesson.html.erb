@@ -1,0 +1,29 @@
+<style type="text/css">
+  .columns {
+    }
+    #main {
+
+    }
+    .span3 {
+    }
+    #main h2 {
+      border-bottom:2px solid #eee;
+      margin:15px 0;
+    }
+    #main h4 {
+      background:#eee;
+      padding-left:5px;
+      margin-top:15px;
+    }
+</style>
+
+<div class="row">
+  <div class="span7 columns">
+    Lesson Plan
+  </div>
+  <div class="span9 columns">
+    <div id="main">
+      <%= raw @project.body_to_html %>
+    </div>
+  </div>
+</div>
