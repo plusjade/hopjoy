@@ -1,15 +1,9 @@
-## Learning about Javascript (in the browser)
+## The Javascript Programming Language
 
+Javascript is a programming language. We can program javascript to perform tasks.
+We can tell it how, when, where to do things.
 
-### Powering your application with Javascript
-
-(learn the basics of programming)
-Datatypes, setting and getting.
-Functional, vs object oriented, etc.
-Crash course into basic usage of a programming language.
-
-Javascript is a programming language. We can program javascript to perform a task.
-We can tell it how, when, where to do it.
+## Javascript for the Web Browser
 
 Javascript will be used for 3 core responsibilities relative to our browser application:
 
