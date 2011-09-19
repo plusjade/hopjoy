@@ -1,10 +1,3 @@
-## What is Javascript?
-
-Javascript is a programming language. We can program javascript to perform tasks.
-We can tell it how, when, where to do things.
-
-## Javascript for the Web Browser
-
 Javascript will be used for 3 core responsibilities relative to our browser application:
 
 - Listen and respond to Events
