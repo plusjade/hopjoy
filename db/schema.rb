@@ -11,12 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919063525) do
+ActiveRecord::Schema.define(:version => 20110919072650) do
 
   create_table "environments", :force => true do |t|
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "environments_languages", :force => true do |t|
+    t.integer "environment_id"
+    t.integer "language_id"
   end
 
   create_table "languages", :force => true do |t|

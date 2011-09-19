@@ -8,9 +8,11 @@ class Page < ActiveRecord::Base
     RDiscount.new(body.to_s).to_html
   end
 
-  def self.get(slug)
-    if File.exists?("pages/#{slug}.md")
-      RDiscount.new(File.new("pages/#{slug}.md").read).to_html
+  def self.get(path)
+    puts path
+    if File.exists?("pages/#{path}.md")
+      puts "eh!"
+      RDiscount.new(File.new("pages/#{path}.md").read).to_html
     else
       ""
     end

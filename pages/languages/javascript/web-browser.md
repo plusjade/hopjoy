@@ -1,7 +1,8 @@
-Javascript will be used for 3 core responsibilities relative to our browser application:
+Javascript is used for 3 core responsibilities relative to a web browser application:
 
 - Listen and respond to Events
-- Update the application environment (the DOM)
+- Update the application environment interface.  
+This is known as the _document object model_ or DOM.
 - Store and retrieve data
 
 ## What is an Event?
@@ -27,7 +28,7 @@ Nearly every interaction you can think of has an "event" attached to its use.
 
 You can create "event listeners" in Javascript that will execute code every time that event is fired.
 
-### Update Your Application Environment With Javascript.
+## Update the Environment Interface.
 
 Javascript allows your application to "be responsive".
 Now that you know what events are you can use them to execute code that "responds" to the event.
@@ -48,7 +49,7 @@ Javascript provides many powerful ways to interact with and manipulate the DOM.
 All of which can be programmed into your events.
 To realize how powerful DOM manipulation can get, consider that video games are being developed for the web-browser.
 
-### Store and Retrieve Data With Javascript.
+## Store and Retrieve Data With Javascript.
 
 The last thing we need Javascript to do is manage our data.
 Users need to be able to enter data into our application.
