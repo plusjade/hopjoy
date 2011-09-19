@@ -3,7 +3,8 @@
 "A web browser is a software application for retrieving, presenting, and traversing information resources on the World Wide Web" - wikipedia.
 
 Web browsers have a set of languages they can understand. 
-It follows then that to make a web-app that runs in a web-browser, you'd use languages the browser can understand.  The three main languages browsers understand are:
+To make a web-app that runs in a web-browser, you should use languages the browser can understand.
+Browsers understand three main languages:
 
 - HTML
 - CSS
@@ -30,19 +31,11 @@ This can be height, width, color, font, position, borders, size, and so on.
 
 ### Javascript
 
-Javascript is a _scripting (programming) language_. It allows the author directly interact and control
-your application environment. You can move things around, create, update, and delete elements,
+Javascript is a _scripting (programming) language_. 
+Javascript is used in the web-browser to directly interact with and control
+the environment user-interface (what the user sees and interacts with). You can move things around, create, update, and delete elements,
 and get and set data from a database.
 
-**Tip: The languages you use will depend on the interface you are programming for.**  
-The Web-browser environment is best suited to work with these particular languages.
-That is not to say these languages _only_ work for the web browser. 
-As your experience grows you will learn about different languages that perform better in different scenarios.
-
-**Recap**  
-We are building a web-application for the web-browser interface.
-The languages we will use are : HTML, CSS, and Javascript.
-  
 ### How a Web Browser Works
 
 Your web browser allows you to send and receive data to other computers on the internet.
@@ -107,7 +100,4 @@ Javascript can use the DOM to find elements on the page to do cool stuff with.
 - HTML maps out your application environment via the DOM.
 - CSS stylizes your application environment.
 - Javascript powers your application.
-
-
-(Get up to speed with HTML and CSS and be able to build a base environment)
 

@@ -8,24 +8,30 @@
 
 <div class="row">
   <div class="span14 columns offset1" style="padding:10px; background:#eee; height:200px">
-    hello
+    <p>
+    Learning about the environment you are making your application for is important because
+    it influences the design and tools you need to use to accomplish your task.
+    </p>
+    
+    <p>
+    Consider if you wanted to build a vehicle that could transport you from one point to another. 
+    The primary question that will influence how you would build the vehicle is:
+    "what is the environment?"
+    </p>
+
+    <p>
+      Building a vehicle for travel in the ocean would surely be different than a vehicle built for land.
+      The tools you would use would change; you might use a sail rather than wheels.
+    </p>
+    <p>
+      Software works in the same way. You use different tools based on different environments.
+      <br/><strong>Computer languages, design patterns, and databases are just tools.</strong> A good programmer will pick the best tools suited for the task at hand.
+    </p>
   </div>
 </div>  
 
-<ul class="media-grid">
-<% @environments.each do |env| %>
-  <li>
-    <a href="/environments/<%= env.slug %>" style="text-align:center">
-      <%= env.slug %>
-      <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-    </a>
-  </li>
-<% end %>
-</ul>
-
-
 <div class="row">
-  <h3 class="main-block">Learn the Core Concepts</h3>
+  <h3 class="main-block">Introduction</h3>
 </div>
 
 
@@ -42,21 +48,42 @@
 </div>
 
 <div class="row">
-  <h3 class="main-block"><%= @environment.slug %></h3>
+  <h3 class="main-block">List of Application Environments</h3>
 </div>
 
+<ul class="media-grid">
+<% @environments.each do |env| %>
+  <li>
+    <a href="/environments/<%= env.slug %>" style="text-align:center">
+      <%= env.slug %>
+      <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+    </a>
+  </li>
+<% end %>
+</ul>
 
-<div class="row">
+<% @environments.each do |env| %>
 
-  <div class="span5 columns">
-    &#160;
+  <div class="row">
+    <h3 class="main-block"><%= env.slug %></h3>
   </div>
 
-  <div class="span10 columns">
-    <%= raw @environment.body_to_html %>
+  <div class="row">
+
+    <div class="span5 columns">
+      <h4>Languages Used</h4>
+      <ul>
+      <% env.languages.each do |lang| %>  
+        <li><%= link_to lang.name, "/languages/#{lang.name}" %></li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="span10 columns">
+      <%= raw env.body_to_html %>
+    </div>
+
   </div>
 
-</div>
-
-
+<% end %>
  

@@ -1,3 +1,8 @@
+### What is the Web?
+
+The web or internet is a network of interconnected computers. It is of course a bit more complicated than that
+but it is no less true that when what we know as the internet is just a collection of computers all connected to one another.
+
 ### What is an Application?
 
 An application is a computer software program designed for the _user_ to perform a task.
@@ -12,10 +17,6 @@ You already use lots of web-based applications. They can run on a wide range of 
 - Mobile phones
 - Ipad
 
-### What is the Internet?
-
-The internet is a network of interconnected computers. It is of course a bit more complicated than that
-but it is no less true that when what we know as the internet is just a collection of computers all connected to one another.
 
 ### What is an Application Environment?
 
