@@ -1,4 +1,4 @@
-## Environment Setup BLAH
+## Environment Setup
 #### Step 1 
 ### Create the application skeleton.
 

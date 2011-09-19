@@ -1,4 +1,4 @@
-## The Javascript Programming Language
+## What is Javascript?
 
 Javascript is a programming language. We can program javascript to perform tasks.
 We can tell it how, when, where to do things.
