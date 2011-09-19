@@ -1,8 +1,9 @@
 <div class="row" >
 
   <div class="span9 columns">
-    <h2>Web Application Environments</h>
+    <h2>Web Application Environments</h2>
   </div>
+  
 </div>
 
 <div class="row">
@@ -11,23 +12,16 @@
   </div>
 </div>  
 
-  <ul class="media-grid">
-    <li>
-      <a href="#"><img class="thumbnail" src="http://placehold.it/90x90" alt=""></a>
-    </li>
-    <li>
-      <a href="#"><img class="thumbnail" src="http://placehold.it/90x90" alt=""></a>
-    </li>
-    <li>
-      <a href="#"><img class="thumbnail" src="http://placehold.it/90x90" alt=""></a>
-    </li>
-    <li>
-      <a href="#"><img class="thumbnail" src="http://placehold.it/90x90" alt=""></a>
-    </li>
-    <li>
-      <a href="#"><img class="thumbnail" src="http://placehold.it/90x90" alt=""></a>
-    </li>
-  </ul>
+<ul class="media-grid">
+<% @environments.each do |env| %>
+  <li>
+    <a href="/environments/<%= env.slug %>" style="text-align:center">
+      <%= env.slug %>
+      <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+    </a>
+  </li>
+<% end %>
+</ul>
 
 
 <div class="row">
@@ -35,38 +29,33 @@
 </div>
 
 
-
 <div class="row">
-  <div class="span5 columns">
 
-    blah
-    
+  <div class="span5 columns">
+    &#160;
   </div>
+
   <div class="span10 columns">
-    <div id="main">
-      <%= raw @intro %>
-      
-    </div>
+    <%= raw @intro %>
   </div>
+
 </div>
 
 <div class="row">
-  <h3 class="main-block">Web Browser</h3>
+  <h3 class="main-block"><%= @environment.slug %></h3>
 </div>
 
 
 <div class="row">
+
   <div class="span5 columns">
-    Hello
-    
+    &#160;
   </div>
+
   <div class="span10 columns">
-    <div id="main">
-      
-      <%= raw @environment.body_to_html %>
-      
-    </div>
+    <%= raw @environment.body_to_html %>
   </div>
+
 </div>
 
 
