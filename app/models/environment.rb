@@ -1,5 +1,5 @@
 class Environment < ActiveRecord::Base
-
+  has_many :projects
   
   def body_to_html
     if File.exists?("pages/environments/#{self.slug}.md")

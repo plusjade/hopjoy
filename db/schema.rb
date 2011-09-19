@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110918011612) do
+ActiveRecord::Schema.define(:version => 20110919063525) do
 
   create_table "environments", :force => true do |t|
     t.string   "slug"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20110918011612) do
     t.datetime "updated_at"
     t.string   "slug"
     t.text     "body"
-    t.string   "platform"
+    t.integer  "environment_id"
   end
 
   create_table "tags", :force => true do |t|
