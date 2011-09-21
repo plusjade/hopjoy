@@ -9,7 +9,7 @@
 
 <% @environments.each do |env| %> 
 <div class="row">
-  <h3 class="main-block"><%= env.slug %></h3>
+  <h3 class="main-block"><%= link_to env.slug, "/environments/#{env.slug}" %></h3>
 </div>
 
 <ul> 
