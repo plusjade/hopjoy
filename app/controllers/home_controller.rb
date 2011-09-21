@@ -17,5 +17,8 @@ class HomeController < ApplicationController
   
   def languages    
     @language = Language.find_by_name!(params[:slug])
+    if params[:environment]
+      @environment = Environment.find_by_slug(params[:environment])
+    end
   end
 end

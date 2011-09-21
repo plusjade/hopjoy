@@ -40,7 +40,9 @@
 <% @language.environments.each do |env| %>
 
   <div class="row">
-    <h3 class="main-block"><%= @language.name.capitalize %> for <%= env.slug %></h3>
+    <h3 class="main-block <%= "highlight" if (@environment && @environment.slug == env.slug) %>">
+      <%= @language.name.capitalize %> for <%= env.slug %>
+    </h3>
   </div>
 
 
