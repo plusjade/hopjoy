@@ -26,7 +26,7 @@ Language.create(
   ]
 )
 
-p = Project.create({:name => 'tic-tac-toe', :environment_id => 1})
+p = Project.create({:slug => 'tic-tac-toe', :environment_id => 1})
 p.languages << Language.find_by_name("javascript")
 p.languages << Language.find_by_name("html")
 p.languages << Language.find_by_name("css")
