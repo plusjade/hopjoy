@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index 
-
+    @environments = Environment.all
+    @languages = Language.all
   end
   
   def about

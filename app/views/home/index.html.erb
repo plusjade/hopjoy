@@ -1,7 +1,38 @@
-<h2>What Do You Want to Build?</h2> 
- 
-<h3>Applications for the Web Browser</h3> 
- 
+<div class="row" >
+
+  <div class="span9 columns">
+    <h2>What Do You Want to Build?</h2> 
+  </div>
+  
+</div>
+
+
+<% @environments.each do |env| %> 
+<div class="row">
+  <h3 class="main-block"><%= env.slug %></h3>
+</div>
+
 <ul> 
-  <li><a href="/projects/tic-tac-toe">Tic-Tac-Toe</a></li> 
+<% env.projects.each do |project| %>
+  <li>
+  <%= link_to project.slug, "/projects/#{project.slug}" %>
+  </li> 
+<% end %>
+</ul>
+
+<% end %>
+
+
+<div class="row" >
+  <div class="span9 columns">
+    <h2>Languages</h2> 
+  </div>
+</div>
+
+<ul> 
+<% @languages.each do |lang| %>
+  <li>
+  <%= link_to lang.name, "/languages/#{lang.name}" %>
+  </li> 
+<% end %>
 </ul>
