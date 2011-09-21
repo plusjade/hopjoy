@@ -6,6 +6,6 @@ Hopjoy::Application.routes.draw do
 
   get "/pages/:slug" => "pages#show"
   
-  get "/environments/:slug" => "home#environments"
+  get "/environments(/:slug)" => "home#environments"
   get "/languages/:slug" => "home#languages"
 end

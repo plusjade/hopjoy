@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   def environments
     @intro = Page.get("web-applications-intro")
     @environments = Environment.all
-    @environment = Environment.find_by_slug!(params[:slug])
+    @environment = Environment.find_by_slug(params[:slug])
   end
   
   def languages    

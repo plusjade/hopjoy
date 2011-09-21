@@ -64,8 +64,10 @@
 
 <% @environments.each do |env| %>
 
-  <div class="row">
-    <h3 class="main-block"><%= env.slug %></h3>
+  <div id="<%= env.slug %>" class="row">
+    <h3 class="main-block <%= "highlight" if (@environment && @environment.slug == env.slug) %>">
+      <%= env.slug %>
+    </h3>
   </div>
 
   <div class="row">
