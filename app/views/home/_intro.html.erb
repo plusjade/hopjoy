@@ -1,0 +1,68 @@
+<div class="row">
+  <h3 class="main-block">What is it?</h3>
+</div>
+
+<div class="row">
+
+  <div class="span5 columns">
+    <h4>Languages Used</h4>
+    <ul>
+    <% intro.languages.each do |lang| %>  
+      <li><%= link_to lang.name, "/languages/#{lang.name}" %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <div class="span10 columns">
+    <%= raw intro.what_to_html %>
+  </div>
+
+</div>
+
+<div class="row">
+  <h3 class="main-block">How Does it Work?</h3>
+</div>
+
+<div class="row">
+	
+  <div class="span5 columns">
+    &#160;
+  </div>
+
+  <div class="span10 columns">
+    	<%= raw intro.how_to_html %>
+  </div>
+
+</div>
+
+<div class="row">
+  <h3 class="main-block">Why Should I Care?</h3>
+</div>
+
+<div class="row">
+	
+  <div class="span5 columns">
+    &#160;
+  </div>
+
+  <div class="span10 columns">
+    	<%= raw intro.why_to_html %>
+  </div>
+
+</div>
+
+<div class="row">
+  <h3 class="main-block">Give me an Example.</h3>
+</div>
+
+<div class="row">
+
+  <div class="span5 columns">
+    &#160;
+  </div>
+
+  <div class="span10 columns">
+    <%= raw intro.example_to_html %>
+  </div>
+
+</div>

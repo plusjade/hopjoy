@@ -6,46 +6,7 @@
   
 </div>
 
-<div class="row">
-  <div class="span14 columns offset1" style="padding:10px; background:#eee; height:200px">
-    <p>
-    Learning about the environment you are making your application for is important because
-    it influences the design and tools you need to use to accomplish your task.
-    </p>
-    
-    <p>
-    Consider if you wanted to build a vehicle that could transport you from one point to another. 
-    The primary question that will influence how you would build the vehicle is:
-    "what is the environment?"
-    </p>
-
-    <p>
-      Building a vehicle for travel in the ocean would surely be different than a vehicle built for land.
-      The tools you would use would change; you might use a sail rather than wheels.
-    </p>
-    <p>
-      Software works in the same way. You use different tools based on different environments.
-      <br/><strong>Computer languages, design patterns, and databases are just tools.</strong> A good programmer will pick the best tools suited for the task at hand.
-    </p>
-  </div>
-</div>  
-
-<div class="row">
-  <h3 class="main-block">Introduction</h3>
-</div>
-
-
-<div class="row">
-
-  <div class="span5 columns">
-    &#160;
-  </div>
-
-  <div class="span10 columns">
-    <%= raw @intro %>
-  </div>
-
-</div>
+<%= render :partial => "intro", :object => @intro %>
 
 <div class="row">
   <h3 class="main-block">List of Application Environments</h3>
@@ -65,27 +26,11 @@
 <% @environments.each do |env| %>
 
   <div id="<%= env.slug %>" class="row">
-    <h3 class="main-block <%= "highlight" if (@environment && @environment.slug == env.slug) %>">
+    <h3 class="main-block highlight">
       <%= env.slug %>
     </h3>
   </div>
 
-  <div class="row">
-
-    <div class="span5 columns">
-      <h4>Languages Used</h4>
-      <ul>
-      <% env.languages.each do |lang| %>  
-        <li><%= link_to lang.name, "/languages/#{lang.name}" %></li>
-      <% end %>
-      </ul>
-    </div>
-
-    <div class="span10 columns">
-      <%= raw env.body_to_html %>
-    </div>
-
-  </div>
-
+	<%= render :partial => "intro", :object => env %>
+	
 <% end %>
- 

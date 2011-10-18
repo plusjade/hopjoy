@@ -3,6 +3,8 @@ class HomeController < ApplicationController
   def index 
     @environments = Environment.all
     @languages = Language.all
+    
+    @intro = Page.get("intro")
   end
   
   def about
@@ -10,7 +12,7 @@ class HomeController < ApplicationController
   end
   
   def environments
-    @intro = Page.get("web-applications-intro")
+    @intro = Intro.new("web-applications-intro")
     @environments = Environment.all
     @environment = Environment.find_by_slug(params[:slug])
   end

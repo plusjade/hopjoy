@@ -1,14 +1,47 @@
-### What is a Web Browser?
+### How a Web Browser Works
 
-"A web browser is a software application for retrieving, presenting, and traversing information resources on the World Wide Web" - wikipedia.
+Your web browser allows you to send and receive data to other computers on the internet.
+When you type in "google.com" the browser is sending a request to the google.com server.
+Based on your exact request (the url you send in) the server will return a response.
+The response is none other than a mix of _HTML, CSS, and Javascript_. 
+Servers also send images, audio, plain text, videos, pdfs, etc which will be covered later.
 
-Web browsers have a set of languages they can understand. 
-To make a web-app that runs in a web-browser, you should use languages the browser can understand.
+As the browser parses the data it begins to render the page.
+
+- HTML received builds out a model of the document (Document Object Model)
+- CSS received stylizes the rendered document (add color, fonts, put this here, align this there)
+- Javascript received is executed.
+
+
+
+
+When you type in www.google.com you are asking the browser to fetch you the content at that particular address.
+Google controls this domain so it can decide what content to respond with.
+
+Based on the content you receive back from Google, 
+The browser formats it accordingly with all the appropriate design elements in tact 
+such as coloring, fonts, layout and so forth.
+
+
+### Formatting and Displaying Web Content
+
+The content that is received from URLs on the Internet is raw code.
+Image files, text, pdfs, and even the layout that defines how the page will look and what colors it should have
+is purely code contained in files that get sent to the browser.
+
+The browser _interprets_ this code and renders the result in a nice way the user can understand.
+The browser, however, can only _interpret_ a few kinds of code languages.
 Browsers understand three main languages:
 
 - HTML
 - CSS
 - Javascript
+
+Browsers also understand the codes that make up images, documents, and audio files but
+these are codes that humans do not write, rather they get automatically generated when they are created.
+
+
+
 
 ### HTML
 
@@ -35,20 +68,6 @@ Javascript is a _scripting (programming) language_.
 Javascript is used in the web-browser to directly interact with and control
 the environment user-interface (what the user sees and interacts with). You can move things around, create, update, and delete elements,
 and get and set data from a database.
-
-### How a Web Browser Works
-
-Your web browser allows you to send and receive data to other computers on the internet.
-When you type in "google.com" the browser is sending a request to the google.com server.
-Based on your exact request (the url you send in) the server will return a response.
-The response is none other than a mix of _HTML, CSS, and Javascript_. 
-Servers also send images, audio, plain text, videos, pdfs, etc which will be covered later.
-
-As the browser parses the data it begins to render the page.
-
-- HTML received builds out a model of the document (Document Object Model)
-- CSS received stylizes the rendered document (add color, fonts, put this here, align this there)
-- Javascript received is executed.
 
 ### The Document Object Model
 
