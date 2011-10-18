@@ -44,7 +44,7 @@
 <ul> 
 <% @languages.each do |lang| %>
   <li>
-  <%= link_to lang.name, "/languages/#{lang.name}" %>
+  <%= link_to lang.name, language_path(lang.name) %>
   </li> 
 <% end %>
 </ul>

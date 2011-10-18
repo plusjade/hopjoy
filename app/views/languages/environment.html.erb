@@ -5,8 +5,8 @@
 </div>
 
 <ul>
-	<li>What is <%= link_to @language.name, "/languages/#{@language.name}" %>?</li>
-	<li>What is <%= link_to @environment.slug, "/environments/#{@environment.slug}" %>?</li>
+	<li>What is <%= link_to @language.name, language_path(@language.name) %>?</li>
+	<li>What is <%= link_to @environment.slug, environment_path(@environment.slug) %>?</li>
 </ul>
 
 <div class="row">

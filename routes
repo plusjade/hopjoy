@@ -1,0 +1,19 @@
+                root        /                                     {:controller=>"home", :action=>"index"}
+               about GET    /about(.:format)                      {:controller=>"home", :action=>"about"}
+                     GET    /projects/:slug(.:format)             {:controller=>"projects", :action=>"show"}
+                     GET    /projects/:slug/:page(.:format)       {:controller=>"projects", :action=>"lesson"}
+        environments GET    /environments(.:format)               {:action=>"index", :controller=>"environments"}
+                     POST   /environments(.:format)               {:action=>"create", :controller=>"environments"}
+     new_environment GET    /environments/new(.:format)           {:action=>"new", :controller=>"environments"}
+    edit_environment GET    /environments/:id/edit(.:format)      {:action=>"edit", :controller=>"environments"}
+         environment GET    /environments/:id(.:format)           {:action=>"show", :controller=>"environments"}
+                     PUT    /environments/:id(.:format)           {:action=>"update", :controller=>"environments"}
+                     DELETE /environments/:id(.:format)           {:action=>"destroy", :controller=>"environments"}
+environment_language GET    /languages/:id/:environment(.:format) {:action=>"environment", :controller=>"languages"}
+           languages GET    /languages(.:format)                  {:action=>"index", :controller=>"languages"}
+                     POST   /languages(.:format)                  {:action=>"create", :controller=>"languages"}
+        new_language GET    /languages/new(.:format)              {:action=>"new", :controller=>"languages"}
+       edit_language GET    /languages/:id/edit(.:format)         {:action=>"edit", :controller=>"languages"}
+            language GET    /languages/:id(.:format)              {:action=>"show", :controller=>"languages"}
+                     PUT    /languages/:id(.:format)              {:action=>"update", :controller=>"languages"}
+                     DELETE /languages/:id(.:format)              {:action=>"destroy", :controller=>"languages"}
