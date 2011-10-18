@@ -1,4 +1,5 @@
 
+<% if intro.content_exists? :what %>
 <div class="row">
   <h3 class="main-block">What is a <%= intro.slug.capitalize %>?</h3>
 </div>
@@ -8,10 +9,10 @@
     <%= raw intro.content(:what) %>
   </div>
 </div>
+<% end %>
 
 
-
-
+<% if intro.content_exists? :example %>
 <div class="row">
   <h3 class="main-block">Examples.</h3>
 </div>
@@ -21,10 +22,11 @@
     <%= raw intro.content(:example) %>
   </div>
 </div>
+<% end %>
 
 
 
-
+<% if intro.content_exists? :how %>
 <div class="row">
   <h3 class="main-block">How Does a <%= intro.slug.capitalize %> Work?</h3>
 </div>
@@ -34,9 +36,10 @@
    	<%= raw intro.content(:how) %>
   </div>
 </div>
+<% end %>
 
 
-
+<% if intro.content_exists? :why %>
 <div class="row">
   <h3 class="main-block">Why Should I Care?</h3>
 </div>
@@ -46,7 +49,7 @@
   	<%= raw intro.content(:why) %>
   </div>
 </div>
-
+<% end %>
 
 
 <div class="row">

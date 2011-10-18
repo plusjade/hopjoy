@@ -9,16 +9,20 @@ module MarkdownFileHelper
     read section
   end
     
-  def read(type)
-    if File.exists? path_to_markdown(type)
-      RDiscount.new(File.new(path_to_markdown(type)).read).to_html
+  def read(section)
+    if self.content_exists?(section)
+      RDiscount.new(File.new(path_to_markdown(section)).read).to_html
     else
       ""
     end
   end
   
-  def path_to_markdown(type)
-    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":type", type.to_s)
+  def content_exists?(section)
+    File.exists? path_to_markdown(section)
+  end
+  
+  def path_to_markdown(section)
+    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":type", section.to_s)
   end
 
   module ClassMethods
