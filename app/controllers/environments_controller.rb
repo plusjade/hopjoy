@@ -1,7 +1,7 @@
 class EnvironmentsController < ApplicationController
 
   def index
-    @intro = Intro.new("web-application-environment")
+    @intro = Environment.new(:slug => "web-application-environment")
     @environments = Environment.all
   end
   

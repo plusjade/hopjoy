@@ -11,7 +11,7 @@ module MarkdownFileHelper
     
   def read(type)
     if File.exists? path_to_markdown(type)
-      RDiscount.new(File.new(path_to_markdown(type)).read).content(:body)
+      RDiscount.new(File.new(path_to_markdown(type)).read).to_html
     else
       ""
     end
