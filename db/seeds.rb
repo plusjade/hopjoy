@@ -27,11 +27,11 @@ Language.create(
 )
 
 p = Project.create({:slug => 'tic-tac-toe', :environment_id => 1})
-p.languages << Language.find_by_name("javascript")
-p.languages << Language.find_by_name("html")
-p.languages << Language.find_by_name("css")
+p.languages << Language.find_by_slug("javascript")
+p.languages << Language.find_by_slug("html")
+p.languages << Language.find_by_slug("css")
 
 browser = Environment.find_by_slug("web-browser")
-browser.languages << Language.find_by_name("javascript")
-browser.languages << Language.find_by_name("html")
-browser.languages << Language.find_by_name("css")
+browser.languages << Language.find_by_slug("javascript")
+browser.languages << Language.find_by_slug("html")
+browser.languages << Language.find_by_slug("css")

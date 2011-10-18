@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110921083343) do
+ActiveRecord::Schema.define(:version => 20111018231508) do
 
   create_table "environments", :force => true do |t|
     t.string   "slug"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20110921083343) do
   end
 
   create_table "languages", :force => true do |t|
-    t.string   "name"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
