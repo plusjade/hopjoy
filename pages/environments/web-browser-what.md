@@ -1,7 +1,3 @@
-### What is a Web Browser?
-
-#### In a Nutshell
-
 A web browser is a software program that allows you to access and retrieve content from the Internet
 on your computer. The content is made available on the internet by means of a URL a type of address for content.
 Once the browser receives the content from the URL it formats it in a nice way for human's to use and understand.

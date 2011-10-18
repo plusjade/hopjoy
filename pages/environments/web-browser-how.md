@@ -1,5 +1,3 @@
-### How a Web Browser Works
-
 Your web browser allows you to send and receive data to other computers on the internet.
 When you type in "google.com" the browser is sending a request to the google.com server.
 Based on your exact request (the url you send in) the server will return a response.
@@ -113,10 +111,3 @@ Objects can also be identified by their attributes (note the id="" and class="" 
 
 In this way CSS can use the DOM to find and stylize the correct elements on the page.
 Javascript can use the DOM to find elements on the page to do cool stuff with.
-
-**Recap**  
-
-- HTML maps out your application environment via the DOM.
-- CSS stylizes your application environment.
-- Javascript powers your application.
-

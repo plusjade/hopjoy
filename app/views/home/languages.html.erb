@@ -1,66 +1,15 @@
+
 <div class="row" >
-
-  <div class="span9 columns">
-    <h2><%= @language.name.capitalize %></h2>
-  </div>
-
+	<h2 class="main-block highlight"><%= @language.name.capitalize %></h2>
 </div>
 
-<div class="row">
-  <div class="span14 columns offset1" style="padding:10px; background:#eee; height:200px">
-    Javascript is a programming language. We can program javascript to perform tasks.
-    We can tell it how, when, where to do things.
-  </div>
-</div>  
+<%= render :partial => "intro", :object => @language %>
 
+<% # Next Steps %>
 <ul>
 <% @language.environments.each do |env| %>
   <li>
-    <%= env.slug %>
+    <%= link_to "#{@language.name} for #{env.slug}", "/languages/#{@language.name}/#{env.slug}" %>
   </li>
 <% end %>  
 </ul>
-
-<div class="row">
-  <h3 class="main-block">Learn the Core Concepts</h3>
-</div>
-
-<div class="row">
-  
-  <div class="span5 columns">
-    &#160;
-  </div>
-
-  <div class="span10 columns">
-    asdf
-  </div>
-  
-</div>
-
-<% @language.environments.each do |env| %>
-
-  <div class="row">
-    <h3 class="main-block <%= "highlight" if (@environment && @environment.slug == env.slug) %>">
-      <%= @language.name.capitalize %> for <%= env.slug %>
-    </h3>
-  </div>
-
-
-  <div class="row">
-
-    <div class="span5 columns">
-      <strong>Recommended</strong>
-        <ul>
-          <li>
-            How <%= link_to env.slug, "/environments/#{env.slug}" %> works
-          </li>
-        </ul>
-    </div>
-
-    <div class="span10 columns">
-      <%= raw Page.get("languages/#{@language.name}/#{env.slug}") %>
-    </div>
-
-  </div>
-
-<% end %>

@@ -10,18 +10,41 @@
   body{
     color:#444;
   }
+	body, p {
+		line-height:20px;
+		font-size: 14px;
+	}
   ul li, ol li{
     color:#444;
   }
+	.container-fluid {
+		
+	}
+
+	.container-fluid > .sidebar {
+	  width: 300px;
+	}
+	.container-fluid > .content {
+	  margin-left: 320px;
+	}
+	
+	.columns {
+		padding-right:20px;
+		border-right:1px solid #ccc;
+	}
   code {background:transparent;}
   .row {
     margin-bottom:15px;
   }
+
   #main h2 {
     border-bottom:2px solid #eee;
     margin:15px 0;
   }
     
+	h2 {
+		margin-left:-40px;
+	}
   .main-block {
     background:#eee;
     padding:5px 20px;
@@ -29,6 +52,7 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
   } 
+
   .highlight {
     background:#57A957;
     color:#FFF;
@@ -39,15 +63,21 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     
     <div class="page-header" style="padding:10px 0">
       <a href="/" class="">hopjoy</a>
       <a href="/about" style="float:right">about</a>
     </div>
-    
-    <%= yield %>
-    
+
+
+		<div class="sidebar" style="height:1px">
+			...
+		</div>
+
+    <div class="content">
+      <%= yield %>
+    </div>
     
   </div>
 

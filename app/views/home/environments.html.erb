@@ -1,16 +1,15 @@
-<div class="row" >
 
-  <div class="span9 columns">
-    <h2>Web Application Environments</h2>
-  </div>
-  
+<div class="row" >
+	<h2 class="main-block highlight"><%= @intro.slug.capitalize %></h2>
 </div>
 
 <%= render :partial => "intro", :object => @intro %>
 
-<div class="row">
-  <h3 class="main-block">List of Application Environments</h3>
-</div>
+<p>
+	Next you should learn about specific types of application environments,
+	especially those you want to make applications for.
+	<br/>Environments are listed below:
+</p>
 
 <ul class="media-grid">
 <% @environments.each do |env| %>
@@ -22,15 +21,3 @@
   </li>
 <% end %>
 </ul>
-
-<% @environments.each do |env| %>
-
-  <div id="<%= env.slug %>" class="row">
-    <h3 class="main-block highlight">
-      <%= env.slug %>
-    </h3>
-  </div>
-
-	<%= render :partial => "intro", :object => env %>
-	
-<% end %>

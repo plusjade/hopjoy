@@ -1,0 +1,17 @@
+<div class="row">
+  <h2 class="main-block highlight">
+    <%= @language.name.capitalize %> for <%= @environment.slug %>
+  </h2>
+</div>
+
+<ul>
+	<li>What is <%= link_to @language.name, "/languages/#{@language.name}" %>?</li>
+	<li>What is <%= link_to @environment.slug, "/environments/#{@environment.slug}" %>?</li>
+</ul>
+
+<div class="row">
+  <div class="span10 columns">
+    <%= raw Page.get("languages/#{@language.name}/#{@environment.slug}") %>
+  </div>
+</div>
+
