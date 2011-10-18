@@ -6,5 +6,9 @@ class Environment < ActiveRecord::Base
   has_many :environments_languages
   has_many :languages, :through => :environments_languages
   
+
+  def name
+    self.slug.to_s.gsub("-", " ").gsub(/\w+/) { |s| s.capitalize }
+  end
   
 end

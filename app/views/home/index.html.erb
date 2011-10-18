@@ -13,14 +13,14 @@
 <% @environments.each do |env| %> 
 <div class="row">
   <h3 class="main-block">
-		<%= link_to env.slug, environment_path(env.slug) %>
+		<%= link_to env.name, environment_path(env.slug) %>
 	</h3>
 </div>
 
 <ul> 
 <% env.projects.each do |project| %>
   <li>
-  <%= link_to project.slug, "/projects/#{project.slug}" %>
+  <%= link_to project.name, "/projects/#{project.slug}" %>
   </li> 
 <% end %>
 </ul>
@@ -44,7 +44,7 @@
 <ul> 
 <% @languages.each do |lang| %>
   <li>
-  <%= link_to lang.name, language_path(lang.name) %>
+  <%= link_to lang.name, language_path(lang.slug) %>
   </li> 
 <% end %>
 </ul>

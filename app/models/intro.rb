@@ -13,6 +13,11 @@ class Intro
   def initialize(path)
     self.slug = path
   end  
-
+  
+  def name
+    self.slug.to_s.gsub("-", " ").capitalize
+  end
+    
+  
   
 end

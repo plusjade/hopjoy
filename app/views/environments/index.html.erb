@@ -1,6 +1,6 @@
 
 <div class="row" >
-	<h2 class="main-block highlight"><%= @intro.slug.capitalize %></h2>
+	<h2 class="main-block highlight"><%= @intro.name %></h2>
 </div>
 
 <%= render :partial => "partials/intro", :object => @intro %>
@@ -15,7 +15,7 @@
 <% @environments.each do |env| %>
   <li>
     <a href="<%= environment_path(env.slug) %>" style="text-align:center">
-      <%= env.slug %>
+      <%= env.name %>
       <img class="thumbnail" src="http://placehold.it/90x90" alt="">
     </a>
   </li>

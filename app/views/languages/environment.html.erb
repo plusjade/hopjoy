@@ -1,12 +1,12 @@
 <div class="row">
   <h2 class="main-block highlight">
-    <%= @language.name.capitalize %> for <%= @environment.slug %>
+    <%= @language.name %> for <%= @environment.name %>
   </h2>
 </div>
 
 <ul>
-	<li>What is <%= link_to @language.name, language_path(@language.name) %>?</li>
-	<li>What is <%= link_to @environment.slug, environment_path(@environment.slug) %>?</li>
+	<li>What is <%= link_to @language.name, language_path(@language.slug) %>?</li>
+	<li>What is <%= link_to @environment.name, environment_path(@environment.slug) %>?</li>
 </ul>
 
 <div class="row">

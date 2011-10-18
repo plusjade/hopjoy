@@ -9,7 +9,7 @@ class Language < ActiveRecord::Base
   has_many :environments, :through => :environments_languages
 
   def name
-    self.slug.to_s.gsub("-", " ").capitalize
+    self.slug.to_s.gsub("-", " ").gsub(/\w+/) { |s| s.capitalize }
   end
   
 end
