@@ -4,9 +4,8 @@ Hopjoy::Application.routes.draw do
   get "/projects/:slug" => "projects#show"
   get "/projects/:slug/:page" => "projects#lesson"
 
-  get "/environments" => "home#environments"
-  get "/environments/:slug" => "home#environments_show"
-
+  resources :environments
+  
   get "/languages/:slug" => "home#languages"
   get "/languages/:slug/:environment" => "home#language_environment"
 

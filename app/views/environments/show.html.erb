@@ -8,15 +8,15 @@
 <div class="row">
 
   <div class="span10 columns">
-    A <%= @environment.slug %> is a type of <%= link_to "web application environment", "/environments" %>.
-		If you are new to these terms you can read <%= link_to "web application environments", "/environments" %>
+    A <%= @environment.slug %> is a type of <%= link_to "web application environment", environments_path %>.
+		If you are new to these terms you can read <%= link_to "web application environment", environments_path %>
 		to better understand the concepts outlined below.
   </div>
 
 </div>
 
 
-<%= render :partial => "intro", :object => @environment %>
+<%= render :partial => "partials/intro", :object => @environment %>
 
 <h3>Supported Languages</h3>
 <ul>

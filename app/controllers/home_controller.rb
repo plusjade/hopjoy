@@ -10,17 +10,7 @@ class HomeController < ApplicationController
   def about
   
   end
-  
-  def environments
-    @intro = Intro.new("web-application-environment")
-    @environments = Environment.all
-  end
-  
-  def environments_show
-    @environment = Environment.find_by_slug(params[:slug])
-  end
-  
-  
+    
   def languages    
     @language = Language.find_by_name!(params[:slug])
   end

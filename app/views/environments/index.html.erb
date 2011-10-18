@@ -3,7 +3,7 @@
 	<h2 class="main-block highlight"><%= @intro.slug.capitalize %></h2>
 </div>
 
-<%= render :partial => "intro", :object => @intro %>
+<%= render :partial => "partials/intro", :object => @intro %>
 
 <p>
 	Next you should learn about specific types of application environments,
@@ -14,7 +14,7 @@
 <ul class="media-grid">
 <% @environments.each do |env| %>
   <li>
-    <a href="/environments/<%= env.slug %>" style="text-align:center">
+    <a href="<%= environment_path(env.slug) %>" style="text-align:center">
       <%= env.slug %>
       <img class="thumbnail" src="http://placehold.it/90x90" alt="">
     </a>
