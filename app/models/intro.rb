@@ -1,7 +1,7 @@
 require 'rdiscount'
 class Intro
   include MarkdownFileHelper
-  markdownify :filename => :slug, :path => "pages/:name-:type.md"
+  markdownify :filename => :slug, :path => "pages/:name-:section.md"
   
   attr_accessor :slug
 

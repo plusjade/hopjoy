@@ -1,6 +1,6 @@
 class Language < ActiveRecord::Base
   include MarkdownFileHelper
-  markdownify :filename => "name", :path => "pages/languages/:name/:type.md"
+  markdownify :filename => "name", :path => "pages/languages/:name/:section.md"
   
   has_many :languages_projects
   has_many :projects, :through => :languages_projects

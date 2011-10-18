@@ -1,6 +1,6 @@
 class Environment < ActiveRecord::Base
   include MarkdownFileHelper
-  markdownify :filename => "slug", :path => "pages/environments/:name/:type.md"
+  markdownify :filename => "slug", :path => "pages/environments/:name/:section.md"
   
   has_many :projects
   has_many :environments_languages

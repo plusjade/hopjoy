@@ -22,7 +22,7 @@ module MarkdownFileHelper
   end
   
   def path_to_markdown(section)
-    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":type", section.to_s)
+    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":section", section.to_s)
   end
 
   module ClassMethods
