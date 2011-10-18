@@ -1,6 +1,10 @@
 require 'rdiscount'
 class Page
 
+  include MarkdownFileHelper
+  markdownify :filename => "name", :path => "pages/:name.md"
+
+
   def self.get(path)
     puts path
     if File.exists?("pages/#{path}.md")
