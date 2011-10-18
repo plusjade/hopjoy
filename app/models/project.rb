@@ -3,9 +3,9 @@ class Project < ActiveRecord::Base
   has_many :languages, :through => :languages_projects
   belongs_to :environment
   
-  def body_to_html
+  def body_content(:body)
     if File.exists?("pages/projects/#{self.slug}.md")
-      RDiscount.new(File.new("pages/projects/#{self.slug}.md").read).to_html
+      RDiscount.new(File.new("pages/projects/#{self.slug}.md").read).content(:body)
     else
       ""
     end

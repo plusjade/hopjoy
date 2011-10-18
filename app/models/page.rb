@@ -9,7 +9,7 @@ class Page
     puts path
     if File.exists?("pages/#{path}.md")
       puts "eh!"
-      RDiscount.new(File.new("pages/#{path}.md").read).to_html
+      RDiscount.new(File.new("pages/#{path}.md").read).content(:body)
     else
       ""
     end

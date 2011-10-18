@@ -4,33 +4,21 @@ module MarkdownFileHelper
     model.extend(ClassMethods)
     class << model; attr_accessor :markdown_path, :markdown_filename end
   end
-    
-  def path_to_markdown(type)
-    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":type", type.to_s)
+
+  def content(section=nil)
+    read section
   end
     
   def read(type)
     if File.exists? path_to_markdown(type)
-      RDiscount.new(File.new(path_to_markdown(type)).read).to_html
+      RDiscount.new(File.new(path_to_markdown(type)).read).content(:body)
     else
       ""
     end
   end
   
-  def what_to_html
-    read :what
-  end
-  
-  def why_to_html
-    read :why
-  end 
-  
-  def how_to_html
-    read :how
-  end
-  
-  def example_to_html
-    read :example
+  def path_to_markdown(type)
+    self.class.markdown_path.gsub(":name", self.send(self.class.markdown_filename).to_s).gsub(":type", type.to_s)
   end
 
   module ClassMethods
